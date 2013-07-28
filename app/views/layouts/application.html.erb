@@ -5,10 +5,30 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 
-<%= yield %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "The Resume app", candidates_home_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", candidates_home_path %></li>
+          <li><%= link_to "Resume Lookup", candidates_path %></li>
+          <li><%= link_to "LinkedIn Profie", 'http://www.linkedin.com/pub/archana-balagondar/3/1b7/278'%></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <%= yield %>
+</div>
+
 
 </body>
 </html>

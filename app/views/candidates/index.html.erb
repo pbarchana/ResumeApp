@@ -1,0 +1,15 @@
+
+<div class="center hero-unit">
+	<p> Please enter the candidate's full name to search for their resume 
+	</p>
+
+	<%= form_tag(controller: "candidates", action:"search", method: "get") do %>
+	  <%= label_tag(:fname, "First Name:") %>
+	  <%= text_field_tag :fname1, 'Archana', :required => true %> <br>
+	  <%= label_tag(:lname, "Last Name:") %>
+	  <%= text_field_tag :lname1, 'Balagondar', :required => true%> <br>
+	  <%= submit_tag("Search") %>
+	<% end %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

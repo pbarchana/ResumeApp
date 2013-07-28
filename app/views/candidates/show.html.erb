@@ -1,0 +1,7 @@
+	<div class="center hero-unit">
+	<p><%= @cand.fname %>  <%= @cand.lname %> resume found</p>
+
+	<p> Please click on the <%= link_to "here", "/"+@cand.link %> to view </p>
+	</div>
+
+	<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
