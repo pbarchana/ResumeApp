@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
 
-	def home
+    def home    	
 	end
 
 	def index
@@ -22,20 +22,5 @@ class CandidatesController < ApplicationController
 			@cands = Candidate.all		
 			redirect_to candidates_path
 		end
-	end
-
-	def new
-	end
-
-	def create
-	end
-
-	def edit
-	end
-
-	def update
-	end
-
-	def destroy
 	end
 end
